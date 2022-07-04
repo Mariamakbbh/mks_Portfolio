@@ -1,20 +1,63 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 import './Cards.css'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import { styled } from '@mui/system';
 
-export const CardItems = (props) => {
-  return (
-    <>
-    <li className='cards__items'>
-        <Link className='cards__item__link' to={props.path}>
-            <figure className='cards__item__pic-wrap' data-category={props.label}> 
-                <img className='cards__item__img' src={props.src} alt='Travel'/>
-            </figure>
-            <div className='cards__item__info'>
-                <h5 className='cards__item__text'>{props.text}</h5> 
-            </div>
-        </Link>
-    </li>
-    </>
-  )
-}
+
+const StyledText = styled(Typography)({
+  fontFamily: 'Montserrat',
+    color: '#000000',
+    fontWeight: 500,
+    fontSize: 15,
+});
+
+const StyledLable = styled(Typography)({
+    fontFamily: 'didot',
+    fontSize: '1rem',
+    textTransform: 'uppercase',
+    backgroundColor: 'rgb(255, 0, 136)',
+    width: '100%',
+    top: '0',
+    position: 'absolute',
+    color: '#fff',
+    fontWeight: 900,
+    padding: '6px 8px',
+
+});
+
+const StyledImageArea = styled(CardMedia)({
+transition: '0.2s',
+  '&:hover': {
+    transform: 'scale(1.1)',
+  },
+});
+
+  export const CardItems = (props) => {
+    return (
+      <Card >
+        <CardActionArea>
+
+          <StyledImageArea
+            component="img"
+            height="260"
+            image={props.src}
+            alt="green iguana"/>
+        
+          <StyledLable gutterBottom variant="h5" component="div" >
+            {props.label}
+          </StyledLable>
+
+          <CardContent >
+            <StyledText variant="body2" color="text.secondary">
+              {props.text}
+            </StyledText>
+          </CardContent>
+
+        </CardActionArea>
+      </Card>
+  );
+  }
