@@ -1,33 +1,51 @@
 import React from 'react'
 import '../../App.css'
-import { Button } from '../Button'
 import './HeroSection.css'
+import Grid from '@mui/material/Grid'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { styled } from '@mui/system';
+
+
+const theme = createTheme();
+
+const StyledIndividualGird = styled(Grid)(() => ({  
+  height: '70vh',
+  flexDirection: 'row',
+  justifyContent: "space-around",
+  width: '25%',
+  marginTop: '18vh',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  outlineColor: 'rgb(255, 0, 136)',
+  outlineStyle: 'solid',
+}));
 
 export const HeroSection = () => {
   return (
-    <div className='hero-container'>
-        <video src='/videos/HomeVideo.mp4' autoPlay loop muted />
-        <h1 id="nametxt">
-            M
-            <span
-             id="normalNametxt">ariama &nbsp;
-            </span> 
-            K
-            <span
-             id="normalNametxt">ebbeh &nbsp;
-            </span>
-            S
-            <span
-             id="normalNametxt">uko
-            </span>
-        </h1>
-        <p>I’m an aspiring full stack developer with a passion for creating beautiful and functional applications.</p>
-        <br/>
-        <div className='hero-btns'>
-            <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
-                Login <i className="far fa-play-circle" />
-            </Button>
-        </div>
-    </div>
-  )
+    <ThemeProvider theme={theme}>
+      <Grid container   wrap={'nowrap'} columnSpacing={{ xs: 1, sm: 1, md: 5 }} sx={{flexDirection: 'row', justifyContent: 'space-evenly', alignContent: 'center'}}>
+        <StyledIndividualGird
+          item
+          sx={{
+            backgroundImage: `url(images/meOut1.JPG)`,
+            
+          }}
+        />
+        <StyledIndividualGird
+          item
+          sx={{
+            backgroundImage: `url(images/meOut2.JPG)`,
+          }}
+        />
+        <StyledIndividualGird
+          item
+          sx={{
+            backgroundImage: `url(images/meOut3.JPG)`,
+          }}
+        />
+      </Grid>
+    </ThemeProvider>
+ 
+  );
 }

@@ -12,7 +12,7 @@ export const Home = () => {
     <Fullpage>
         <FullpageNavigation />
         <FullPageSections>
-            <FullpageSection className='FullPageSections'>
+            <FullpageSection className='homeSection'>
                 <HeroSection/>
             </FullpageSection>
 

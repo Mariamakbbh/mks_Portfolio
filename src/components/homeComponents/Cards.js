@@ -47,7 +47,7 @@ export const Cards = () => {
                     </h1>
             </Grid>
             
-            <Grid item sx={{ overflow:'scroll', padding: '7px'}}>
+            <Grid item sx={{ overflowX:'scroll', overflowY:'hidden', '&::-webkit-scrollbar': {display: 'none'}, padding: '7px'}}>
                 <Grid container wrap={'nowrap'} columnSpacing={{ xs: 0.2, sm: 1, md: 6 }} sx={{ paddingTop:'4rem', minWidth: 'max-content'}} >
                     <StyledIndividualGird item>
                         <CardItems 

@@ -7,8 +7,8 @@ video {
 }
 
 .hero-container {
-    /* background: url('/public/images/me.JPG') center center/cover no-repeat; */
-    height: 100vh;
+    background: url('https://source.unsplash.com/random') center center/cover no-repeat;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,7 @@ video {
     padding: 0.5rem;
     font-family: cursive;
     color: rgb(255, 0, 136);
+    
   }
   
 #normalNametxt {  

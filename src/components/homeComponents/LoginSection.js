@@ -12,7 +12,7 @@ import Grid from '@mui/material/Grid';
 // import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import UploadIcon from "./private2.jpeg";
+import UploadIcon from "./private.jpeg";
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
@@ -39,7 +39,7 @@ export const LoginSection = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh', paddingTop: 10}}>
+      <Grid container component="main" sx={{ height: '100vh', paddingTop: 10,}}>
         <CssBaseline />
         <Grid
           item
@@ -58,29 +58,32 @@ export const LoginSection = () => {
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              my: 8,
-              mx: 4,
+              my: 5,
+              mx: 8,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: 'rgb(255, 0, 136)' }}>
               {/* <LockOutlinedIcon /> */}
             </Avatar>
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
+            <br/>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
             
             {/* Dropdown menue */}
-            <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Select Section</InputLabel>
+            <FormControl fullWidth >
+            <InputLabel id="demo-simple-select-label" sx={{color: 'white'}}>Select Site</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={selectedSection}
               label="selectedSection"
+              sx={{backgroundColor: '#1976d2', 
+                  color: 'white'}}
               onChange={handleChange}
             >
             <MenuItem value={10}>Professional Progress Tracking</MenuItem>
@@ -88,7 +91,7 @@ export const LoginSection = () => {
             <MenuItem value={30}>Learning Agenda</MenuItem>
             </Select>
             </FormControl>
-
+            <br/>
 
               <TextField
                 margin="normal"
@@ -118,7 +121,7 @@ export const LoginSection = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, backgroundColor:'rgb(255, 0, 136)' }}
               >
                 Sign In
               </Button>
