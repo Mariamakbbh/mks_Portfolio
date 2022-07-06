@@ -13,10 +13,10 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import UploadIcon from "./private.jpeg";
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
+// import FormControl from '@mui/material/FormControl';
+// import Select from '@mui/material/Select';
+// import InputLabel from '@mui/material/InputLabel';
+// import MenuItem from '@mui/material/MenuItem';
 
 
 const theme = createTheme();
@@ -31,11 +31,11 @@ export const LoginSection = () => {
     });
   };
 
-  const [selectedSection, SetselectedSection] = React.useState('');
+  // const [selectedSection, SetselectedSection] = React.useState('');
 
-  const handleChange = (event) => {
-    SetselectedSection(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   SetselectedSection(event.target.value);
+  // };
 
   return (
     <ThemeProvider theme={theme}>
@@ -75,7 +75,7 @@ export const LoginSection = () => {
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
             
             {/* Dropdown menue */}
-            <FormControl fullWidth >
+            {/* <FormControl fullWidth >
             <InputLabel id="demo-simple-select-label" sx={{color: 'white'}}>Select Site</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -91,7 +91,7 @@ export const LoginSection = () => {
             <MenuItem value={30}>Learning Agenda</MenuItem>
             </Select>
             </FormControl>
-            <br/>
+            <br/> */}
 
               <TextField
                 margin="normal"

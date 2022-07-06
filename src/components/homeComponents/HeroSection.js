@@ -19,6 +19,11 @@ const StyledIndividualGird = styled(Grid)(() => ({
   backgroundPosition: 'center',
   outlineColor: 'rgb(255, 0, 136)',
   outlineStyle: 'solid',
+  transition: '0.2s',
+  '&:hover': {
+    transform: 'scale(1.1)',
+    filter: 'grayscale(5.5)',
+  },
 }));
 
 export const HeroSection = () => {
