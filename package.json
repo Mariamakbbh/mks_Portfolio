@@ -1,7 +1,7 @@
 {
-  "name": "mks",
+  "name": "mks_Portfolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/Mariamakbbh/mks_user_api",
+  "homepage": "https://github.com/Mariamakbbh/mks_Portfolio",
   "private": true,
   "proxy": "http://api:5000",
   "dependencies": {
