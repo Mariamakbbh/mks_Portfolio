@@ -1,13 +1,15 @@
-FROM node:alpine
+FROM node:latest
 
-WORKDIR /app
+WORKDIR /usr/src/app 
+
+COPY ./package.json ./
+
+COPY ./package-lock.json ./
+
+RUN npm install 
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["yarn", "start"]
-
-
-
-
+CMD ["npm", "start"]

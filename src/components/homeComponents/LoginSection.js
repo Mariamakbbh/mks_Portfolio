@@ -22,13 +22,30 @@ import UploadIcon from "./private.jpeg";
 const theme = createTheme();
 
 export const LoginSection = () => {
-  const handleSubmit = (event) => {
+
+  let handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    try {
+      const data = new FormData(event.currentTarget);
+      let res = await fetch("http://localhost:3080/user_login/userAuth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+      },
+        body: JSON.stringify({
+          email: data.get('email'),
+          password: data.get('password')
+        }),
+      });
+      // let resJson = await res.json();
+      if (res.status === 200 || res.status === 201) {
+        console.log("Authorised User: ", res.body);
+      } else {
+        console.log("Not sent. Status Text: " + res.statusText + " Status Code: " + res.status);
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   // const [selectedSection, SetselectedSection] = React.useState('');
