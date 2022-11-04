@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Mariamakbbh/mks_user_api/static/css/main.2825304d.css",
-    "main.js": "/Mariamakbbh/mks_user_api/static/js/main.e89c6aaf.js",
-    "static/js/787.6159cc3f.chunk.js": "/Mariamakbbh/mks_user_api/static/js/787.6159cc3f.chunk.js",
-    "static/media/img-2.jpg": "/Mariamakbbh/mks_user_api/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
-    "static/media/private.jpeg": "/Mariamakbbh/mks_user_api/static/media/private.51995c2e2adddeb8a311.jpeg",
-    "static/media/img-1.jpg": "/Mariamakbbh/mks_user_api/static/media/img-1.53f4843759ebec256cb9.jpg",
-    "static/media/img-8.jpg": "/Mariamakbbh/mks_user_api/static/media/img-8.fabdf94dc5be2d3dc707.jpg",
-    "index.html": "/Mariamakbbh/mks_user_api/index.html",
-    "main.2825304d.css.map": "/Mariamakbbh/mks_user_api/static/css/main.2825304d.css.map",
-    "main.e89c6aaf.js.map": "/Mariamakbbh/mks_user_api/static/js/main.e89c6aaf.js.map",
-    "787.6159cc3f.chunk.js.map": "/Mariamakbbh/mks_user_api/static/js/787.6159cc3f.chunk.js.map"
+    "main.css": "/Mariamakbbh/mks_Portfolio/static/css/main.cb0ff704.css",
+    "main.js": "/Mariamakbbh/mks_Portfolio/static/js/main.416788f5.js",
+    "static/js/787.5be169b9.chunk.js": "/Mariamakbbh/mks_Portfolio/static/js/787.5be169b9.chunk.js",
+    "static/media/img-2.jpg": "/Mariamakbbh/mks_Portfolio/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
+    "static/media/private.jpeg": "/Mariamakbbh/mks_Portfolio/static/media/private.51995c2e2adddeb8a311.jpeg",
+    "static/media/img-1.jpg": "/Mariamakbbh/mks_Portfolio/static/media/img-1.53f4843759ebec256cb9.jpg",
+    "static/media/img-8.jpg": "/Mariamakbbh/mks_Portfolio/static/media/img-8.fabdf94dc5be2d3dc707.jpg",
+    "index.html": "/Mariamakbbh/mks_Portfolio/index.html",
+    "main.cb0ff704.css.map": "/Mariamakbbh/mks_Portfolio/static/css/main.cb0ff704.css.map",
+    "main.416788f5.js.map": "/Mariamakbbh/mks_Portfolio/static/js/main.416788f5.js.map",
+    "787.5be169b9.chunk.js.map": "/Mariamakbbh/mks_Portfolio/static/js/787.5be169b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2825304d.css",
-    "static/js/main.e89c6aaf.js"
+    "static/css/main.cb0ff704.css",
+    "static/js/main.416788f5.js"
   ]
 }
