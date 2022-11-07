@@ -1,15 +1,15 @@
 FROM node:latest
 
-# WORKDIR /usr/src/app 
+WORKDIR /usr/src/app 
 
-# COPY ./package.json ./
+COPY ./package.json ./
 
-# COPY ./package-lock.json ./
+COPY ./package-lock.json ./
 
-# RUN npm install 
+RUN npm install 
 
-# COPY . .
+COPY . .
 
-# EXPOSE 8080
+EXPOSE 8080
 
-# CMD ["npm", "start"]
+CMD ["npm", "start"]
