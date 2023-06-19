@@ -1,12 +1,12 @@
-video {
+/* video {
     width: 100%;
     height: 35%;
     object-fit: cover;
     position: fixed;
     z-index: -1;
-}
+} */
 
-.hero-container {
+/* .hero-container {
     background: url('https://source.unsplash.com/random') center center/cover no-repeat;
     height: 100%;
     width: 100%;
@@ -16,10 +16,10 @@ video {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     justify-content: center; 
-}
+} */
 
 
-#nametxt {
+/* #nametxt {
     font-size: 80px;
     margin-top: 310px;
     text-align: center;
@@ -27,14 +27,18 @@ video {
     font-family: cursive;
     color: rgb(255, 0, 136);
     
-  }
+  } */
   
-#normalNametxt {  
+/* #normalNametxt {  
     color: #fff;
     /* font-family:  didot, serif; */
-    font-size: 50px;
+    /* font-size: 50px; */
     
-  } 
+/* }  */ 
+
+.body{
+    margin: auto;
+}
 
 .hero-container > p {
     font-size: 25px;
@@ -45,16 +49,16 @@ video {
 
 }
 
-.hero-btns {
-    margin-top: 20px;
-    border: 2px solid rgba(255, 0, 136, 0.494);
+/* .hero-btns {
+    /* margin-top: 20px; */
+    /* border: 2px solid rgba(255, 0, 136, 0.494); */
     /* padding: 0.5px 35px; */
-    background-color: rgba(255, 255, 255, 0.35);
-}
+    /* background-color: rgba(255, 255, 255, 0.35); */
+/* } */ 
 
-.fa-play-circle {
+/* .fa-play-circle {
     margin-left: 4px;
-}
+} */
 
 
 @media screen and (max-width: 1100px) {

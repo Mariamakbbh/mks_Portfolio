@@ -1,27 +1,25 @@
 import React from 'react';
-import '../../App.css';
+import '../../../App.css';
 import './Home.css';
-import {Cards} from '../homeComponents/Cards';
-import {HeroSection} from '../homeComponents/HeroSection';
-import {LoginSection} from '../homeComponents/LoginSection';
 import Fullpage, {FullPageSections, FullpageSection, FullpageNavigation}  from '@ap.cx/react-fullpage';
+import {HeroGetInTouch} from '../../getInTouchComponents/HeroGetInTouch';
 
 
-export const Home = () => {
+export const GetInTouch = () => {
   return (
     <Fullpage>
         <FullpageNavigation />
         <FullPageSections>
-            <FullpageSection className='homeSection'>
-                <HeroSection/>
+            <FullpageSection className='FullPageSections'>
+                <HeroGetInTouch/>
             </FullpageSection>
 
             <FullpageSection className='FullPageSections'>
-                <Cards/>    
+                <h1>P2</h1>  
             </FullpageSection>
 
             <FullpageSection className='FullPageSections'>
-                <LoginSection/>
+                <h1>P3</h1>
             </FullpageSection>
 
         </FullPageSections>
