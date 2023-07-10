@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../App.css';
 import './Home.css';
 import {Cards} from '../../homeComponents/intro_section/Cards';
-import {HeroSection} from '../../homeComponents/hero_section/HeroSection';
+import {HeroSection} from '../../homeComponents/hero_section/heroIntro/HeroSection';
 import {LoginSection} from '../../homeComponents/info_section/login/LoginSection';
 import Fullpage, {FullPageSections, FullpageSection, FullpageNavigation}  from '@ap.cx/react-fullpage';
 

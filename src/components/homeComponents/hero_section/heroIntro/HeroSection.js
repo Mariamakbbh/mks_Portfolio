@@ -1,12 +1,12 @@
 import React from 'react'
-import '../../../App.css'
+import '../../../../App.css'
 import './HeroSection.css'
 import Grid from '@mui/material/Grid'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { styled } from '@mui/system';
-import img_one from '../../../img/meOut1.JPG'
-import img_two from '../../../img/meOut2.JPG'
-import img_three from  '../../../img/meOut3.JPG'
+import img_one from '../../../../img/meOut1.JPG'
+import img_two from '../../../../img/meOut2.JPG'
+import img_three from  '../../../../img/meOut3.JPG'
 
 
 const theme = createTheme();
@@ -38,15 +38,23 @@ const StyledIndividualGird = styled(Grid)(() => ({
   },
 }));
 
+const StyledGroupGird = styled(Grid)(() => ({  
+  transition: '0.2s',
+  '&:hover': {
+    transform: 'scale(1.1)',
+    filter: 'grayscale(5.5)',
+  },
+}));
+
 export const HeroSection = () => {
   return (
     <ThemeProvider theme={theme}>
       <StyledImageGird container>
-        <Grid container   wrap={'nowrap'} columnSpacing={{ xs: 1, sm: 1, md: 5 }} sx={{flexDirection: 'row', justifyContent: 'space-evenly', alignContent: 'center'}}>
+        <StyledGroupGird container   wrap={'nowrap'} columnSpacing={{ xs: 1, sm: 1, md: 5 }} sx={{flexDirection: 'row', justifyContent: 'space-evenly', alignContent: 'center'}}>
           <StyledIndividualGird item sx={{backgroundImage: `url(${img_one})`,}}/>
           <StyledIndividualGird item sx={{backgroundImage: `url(${img_two})`,}}/>
           <StyledIndividualGird item sx={{backgroundImage: `url(${img_three})`,}}/>
-        </Grid>
+        </StyledGroupGird>
       </StyledImageGird>
     </ThemeProvider>
  
