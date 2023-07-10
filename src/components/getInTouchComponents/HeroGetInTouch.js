@@ -12,51 +12,23 @@ import Grid from '@mui/material/Grid';
 // import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import UploadIcon from "./private.jpeg";
-// import FormControl from '@mui/material/FormControl';
-// import Select from '@mui/material/Select';
-// import InputLabel from '@mui/material/InputLabel';
-// import MenuItem from '@mui/material/MenuItem';
 
 
 const theme = createTheme();
 
-export const LoginSection = () => {
-
-  let handleSubmit = async (event) => {
+export const HeroGetInTouch = () => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    try {
-      const data = new FormData(event.currentTarget);
-      let res = await fetch("http://localhost:3080/user_login/userAuth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-      },
-        body: JSON.stringify({
-          email: data.get('email'),
-          password: data.get('password')
-        }),
-      });
-      // let resJson = await res.json();
-      if (res.status === 200 || res.status === 201) {
-        console.log("Authorised User: ", res.body);
-      } else {
-        console.log("Not sent. Status Text: " + res.statusText + " Status Code: " + res.status);
-      }
-    } catch (err) {
-      console.log(err);
-    }
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
   };
-
-  // const [selectedSection, SetselectedSection] = React.useState('');
-
-  // const handleChange = (event) => {
-  //   SetselectedSection(event.target.value);
-  // };
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh', paddingTop: 10,}}>
+      <Grid container component="main" sx={{ height: '100vh', marginTop: 30 }}>
         <CssBaseline />
         <Grid
           item
@@ -64,7 +36,7 @@ export const LoginSection = () => {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: `url(${UploadIcon})`,
+            backgroundImage: 'url(https://source.unsplash.com/random)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -75,41 +47,20 @@ export const LoginSection = () => {
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              my: 5,
-              mx: 8,
+              my: 8,
+              mx: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'rgb(255, 0, 136)' }}>
+            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
               {/* <LockOutlinedIcon /> */}
             </Avatar>
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <br/>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-            
-            {/* Dropdown menue */}
-            {/* <FormControl fullWidth >
-            <InputLabel id="demo-simple-select-label" sx={{color: 'white'}}>Select Site</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={selectedSection}
-              label="selectedSection"
-              sx={{backgroundColor: '#1976d2', 
-                  color: 'white'}}
-              onChange={handleChange}
-            >
-            <MenuItem value={10}>Professional Progress Tracking</MenuItem>
-            <MenuItem value={20}>Personal Progress Tracking</MenuItem>
-            <MenuItem value={30}>Learning Agenda</MenuItem>
-            </Select>
-            </FormControl>
-            <br/> */}
-
               <TextField
                 margin="normal"
                 required
@@ -138,7 +89,7 @@ export const LoginSection = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, backgroundColor:'rgb(255, 0, 136)' }}
+                sx={{ mt: 3, mb: 2 }}
               >
                 Sign In
               </Button>

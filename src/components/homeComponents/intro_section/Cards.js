@@ -3,11 +3,15 @@ import {CardItems} from './CardItems'
 import './Cards.css'
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/system';
+import card_one from '../../../img/mirando.JPG'
+import card_two from '../../../img/aboutme.JPG'
+import card_three from '../../../img/Contact.png'
 
 const MainGridContainer = styled(Grid)(() => ({  
     alignItems: "center",
     padding: '6rem 1.5rem',
     justifyContent: "space-around",
+    height: '100vh',
    
 }));
 
@@ -53,21 +57,21 @@ export const Cards = () => {
                         <CardItems 
                             label={'Projects'}
                             text={'Take a look at my portfolio!'}
-                            src={'images/mirando.JPG'}/>
+                            src={card_one}/>
                     </StyledIndividualGird>
           
                     <StyledIndividualGird item>
                         <CardItems 
                             label={'About Me'}
                             text={'Who Am I? Understand my background!'}
-                            src={'images/aboutme.JPG'}/>                    
+                            src={card_two}/>                    
                     </StyledIndividualGird>
 
                     <StyledIndividualGird item>
                         <CardItems
                             label={'Contact'}
                             text={'Get in touch with me!'}
-                            src={'images/Contact.png'}/>
+                            src={card_three}/>
                     </StyledIndividualGird> 
                 </Grid>
             </Grid>

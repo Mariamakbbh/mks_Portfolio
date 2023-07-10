@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { Button } from './Button'
+import Grid from '@mui/material/Grid';
 
 export const Navbar = () => {
 
@@ -27,8 +28,8 @@ window.addEventListener('resize', showButton);
 
   return (
     <>
-    <nav className='navbar'>
-        <div className='navbar-container'> 
+    <Grid className='navbar' sx={{position: 'fixed'}}>
+        <Grid className='navbar-container'> 
             <Link to={"/"} className='navbar-logo' onClick={closeMobileMenu}>
                 <i className="fa-duotone fa-m"></i>
                 .
@@ -63,8 +64,8 @@ window.addEventListener('resize', showButton);
                 </li>
             </ul>
             {button && <Button buttonStyle='btn--outline'>Projects</Button>}
-        </div>
-    </nav>
+        </Grid>
+    </Grid>
     </>
   )
 }
